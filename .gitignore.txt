@@ -1,0 +1,11 @@
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.vs/
+.vscode/
+
+appsettings.json
+appsettings.Development.json

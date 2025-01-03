@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using RedisCacheProject.Context;
 using RedisCacheProject.Mapper;
 using RedisCacheProject.Repository;
@@ -21,7 +22,7 @@ namespace RedisCacheProject.IOC
             // Redis
             services.AddStackExchangeRedisCache(options =>
             {
-                options.Configuration = configuration["Redis:Connection"];
+                options.Configuration = configuration.GetConnectionString("Redis");
             });
 
             // Mapper
